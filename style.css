@@ -1,5 +1,5 @@
 body {
-    font-family: 'Barbra Condensed', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #035FA5;
     color: #ffffff;
     margin: 0;
@@ -9,80 +9,59 @@ body {
 header {
     background-color: #CB950F;
     color: #ffffff;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
+    margin: 0.5rem 0;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFDD57;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .container {
-    margin-top: 120px; /* Altezza combinata di header e nav */
-    padding: 1rem;
-}
-
-.section {
+    margin-top: 150px; /* Adjusted height to accommodate the header */
     padding: 2rem;
     text-align: center;
 }
 
+.section {
+    padding: 2rem 0;
+}
+
 .section h2 {
-    color: #CB950F;
-}
-
-.gallery-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    margin-top: 120px; /* Altezza combinata di header e nav */
-}
-
-.gallery-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.gallery-image {
-    width: 100%;
-    min-width: 100%;
-}
-
-.gallery-controls {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    box-sizing: border-box;
-}
-
-.gallery-controls button {
-    background: none;
-    border: none;
-    color: white;
+    color: #FFDD57;
     font-size: 2rem;
-    cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.gallery-controls button:hover {
-    opacity: 0.8;
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -96,8 +75,6 @@ footer {
     z-index: 1000;
 }
 
-.social a {
-    color: #CB950F;
-    margin: 0 0.5rem;
-    text-decoration: none;
+footer p {
+    margin: 0;
 }

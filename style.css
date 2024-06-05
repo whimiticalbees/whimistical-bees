@@ -1,77 +1,103 @@
-/* Reset dei margini e dei padding */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Stile generale del body */
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Barbra Condensed', sans-serif;
     background-color: #035FA5;
     color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
-/* Stile dell'header */
 header {
     background-color: #CB950F;
     color: #ffffff;
     padding: 1rem;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 999;
+    z-index: 1000;
 }
 
-/* Stile del menu di navigazione */
 nav {
     display: flex;
-    justify-content: flex-start;
-    position: fixed;
-    width: 100%;
-    top: 60px; /* Altezza dell'header */
-    background-color: #CB950F;
-    padding: 1rem;
-    z-index: 999;
+    gap: 1rem;
 }
 
 nav a {
     color: #ffffff;
-    margin: 0 1rem;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-/* Stile del contenitore principale */
 .container {
     margin-top: 120px; /* Altezza combinata di header e nav */
-    padding: 2rem;
+    padding: 1rem;
 }
 
-/* Stile delle sezioni */
 .section {
+    padding: 2rem;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .section h2 {
     color: #CB950F;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
 }
 
-/* Stile del footer */
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 120px; /* Altezza combinata di header e nav */
+}
+
+.gallery-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-image {
+    width: 100%;
+    min-width: 100%;
+}
+
+.gallery-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.gallery-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-controls button:hover {
+    opacity: 0.8;
+}
+
 footer {
-    background-color: #CB950F;
-    color: #ffffff;
+    background-color: #333;
+    color: #fff;
     padding: 1rem;
     text-align: center;
     position: fixed;
     width: 100%;
     bottom: 0;
-    z-index: 999;
+    z-index: 1000;
+}
+
+.social a {
+    color: #CB950F;
+    margin: 0 0.5rem;
+    text-decoration: none;
 }

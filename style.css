@@ -1,0 +1,77 @@
+/* Reset dei margini e dei padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile generale del body */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #035FA5;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile dell'header */
+header {
+    background-color: #CB950F;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+/* Stile del menu di navigazione */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    width: 100%;
+    top: 60px; /* Altezza dell'header */
+    background-color: #CB950F;
+    padding: 1rem;
+    z-index: 999;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Stile del contenitore principale */
+.container {
+    margin-top: 120px; /* Altezza combinata di header e nav */
+    padding: 2rem;
+}
+
+/* Stile delle sezioni */
+.section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    color: #CB950F;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Stile del footer */
+footer {
+    background-color: #CB950F;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+}

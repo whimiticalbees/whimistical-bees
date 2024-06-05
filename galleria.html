@@ -2,11 +2,52 @@
 <html lang="it">
 <head>
     <link rel="icon" href="favicon.ico.jpg" type="image/jpg">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whimistical Bees - Galleria</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 120px; /* Altezza combinata di header e nav */
+        }
+
+        .gallery-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery-image {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        .gallery-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .gallery-controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .gallery-controls button:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,12 +61,63 @@
     </header>
 
     <div class="container">
-        <!-- Contenuto della pagina Galleria -->
+        <section id="galleria" class="section">
+            <h2>Galleria</h2>
+            <div class="gallery-container">
+                <div class="gallery-wrapper">
+                    <img class="gallery-image" src="IMG_8708.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8710.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8713.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8729.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8734.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8749.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8756.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8759.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8765.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8776.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8788.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8798.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8802.jpg" alt="">
+                    <img class="gallery-image" src="IMG_8804.jpg" alt="">
+                </div>
+                <div class="gallery-controls">
+                    <button onclick="prevSlide()">&#10094;</button>
+                    <button onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer>
         <p>&copy; 2024 Whimistical Bees. Tutti i diritti riservati.</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("gallery-image");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Cambia immagine ogni 2 secondi
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlides();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlides();
+        }
+    </script>
 
 </body>
 </html>

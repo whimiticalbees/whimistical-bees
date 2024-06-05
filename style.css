@@ -10,7 +10,7 @@ header {
     background-color: #CB950F;
     color: #ffffff;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
     position: fixed;
@@ -20,16 +20,10 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    flex: 1;
-    text-align: center;
-    margin: 0;
-}
-
 nav {
     display: flex;
-    flex: 1;
-    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
 }
 
 nav a {
@@ -60,4 +54,10 @@ footer {
 
 .section h2 {
     color: #CB950F;
+}
+
+/* Aggiunta regola per il titolo del sito */
+.title {
+    flex: 1;
+    text-align: center;
 }

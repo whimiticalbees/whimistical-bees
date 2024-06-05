@@ -81,8 +81,8 @@
                     <img class="gallery-image" src="IMG_8804.jpg" alt="">
                 </div>
                 <div class="gallery-controls">
-                    <button onclick="prevSlide()">&#10094;</button>
-                    <button onclick="nextSlide()">&#10095;</button>
+                    <button id="prev">&lt;</button>
+                    <button id="next">&gt;</button>
                 </div>
             </div>
         </section>
@@ -93,32 +93,32 @@
     </footer>
 
     <script>
-        let slideIndex = 0;
-        showSlides();
+        const wrapper = document.querySelector('.gallery-wrapper');
+        const images = document.querySelectorAll('.gallery-image');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        let index = 0;
 
-        function showSlides() {
-            let i;
-            const slides = document.getElementsByClassName("gallery-image");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 2000); // Cambia immagine ogni 2 secondi
+        function showImageAt(index) {
+            const offset = -index * 100;
+            wrapper.style.transform = `translateX(${offset}%)`;
         }
 
-        function nextSlide() {
-            slideIndex++;
-            showSlides();
+        function showNextImage() {
+            index = (index + 1) % images.length;
+            showImageAt(index);
         }
 
-        function prevSlide() {
-            slideIndex--;
-            showSlides();
+        function showPrevImage() {
+            index = (index - 1 + images.length) % images.length;
+            showImageAt(index);
         }
+
+        nextBtn.addEventListener('click', showNextImage);
+        prevBtn.addEventListener('click', showPrevImage);
+
+        setInterval(showNextImage, 3000); // Cambia immagine ogni 3 secondi
     </script>
-
 </body>
 </html>
 

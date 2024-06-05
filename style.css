@@ -1,16 +1,20 @@
+/* Reset CSS */
 body {
-    font-family: 'Barbra Condensed', sans-serif;
-    background-color: #035FA5;
-    color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
+/* Typography */
+body {
+    font-family: 'Barbra Condensed', sans-serif;
+}
+
+/* Header */
 header {
     background-color: #CB950F;
     color: #ffffff;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     position: fixed;
@@ -20,18 +24,30 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+header h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
 nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex: 1;
+    justify-content: flex-start;
 }
 
 nav a {
     color: #ffffff;
     margin: 0 1rem;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #CB950F;
+}
+
+/* Container */
 .container {
     padding-top: 120px; /* Space for the fixed header */
     display: flex;
@@ -42,6 +58,12 @@ nav a {
     text-align: center;
 }
 
+/* Sections */
+.section h2 {
+    color: #CB950F;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -52,12 +74,61 @@ footer {
     width: 100%;
 }
 
-.section h2 {
-    color: #CB950F;
+/* Title Button */
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid #CB950F;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Aggiunta regola per il titolo del sito */
-.title {
-    flex: 1;
-    text-align: center;
+.title:hover {
+    background-color: #CB950F;
+    color: #fff;
+}
+
+/* Gallery */
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 120px; /* Altezza combinata di header e nav */
+}
+
+.gallery-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-image {
+    width: 100%;
+    min-width: 100%;
+}
+
+.gallery-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.gallery-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-controls button:hover {
+    opacity: 0.8;
 }

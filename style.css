@@ -11,8 +11,8 @@ body {
 
 /* Header */
 header {
-    background-color: #CB950F;
-    color: #ffffff;
+    background-color: #333;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +33,7 @@ header h1 {
 nav {
     display: flex;
     flex: 1;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -56,6 +56,7 @@ nav a:hover {
     justify-content: center;
     height: 100vh;
     text-align: center;
+    background-color: #F3F3F3; /* Aggiunto colore di sfondo */
 }
 
 /* Sections */
@@ -84,11 +85,12 @@ footer {
     border: 2px solid #CB950F;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    background-color: #CB950F; /* Aggiunto colore di sfondo */
+    color: #fff; /* Cambiato colore del testo */
 }
 
 .title:hover {
-    background-color: #CB950F;
-    color: #fff;
+    background-color: #FFD700; /* Cambiato colore di sfondo al passaggio del mouse */
 }
 
 /* Gallery */

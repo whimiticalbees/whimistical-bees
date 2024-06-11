@@ -7,11 +7,53 @@
     <title>Whimistical Bees - Galleria</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .title {
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #cb950f;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
         .gallery-container {
             width: 100%;
             overflow: hidden;
             position: relative;
-            margin-top: 120px; 
         }
 
         .gallery-wrapper {
@@ -20,9 +62,9 @@
         }
 
         .gallery-image {
-            width: 100%;
-            min-width: 100%;
-            object-fit: cover; 
+            width: 80%;
+            min-width: 80%;
+            margin: 0 auto;
         }
 
         .gallery-controls {
@@ -48,12 +90,19 @@
         .gallery-controls button:hover {
             opacity: 0.8;
         }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1><a href="index.html">Whimistical Bees</a></h1>
+        <h1 class="title" onclick="window.location.href='index.html'">Whimistical Bees</h1>
         <nav>
             <a href="galleria.html">Galleria</a>
             <a href="video.html">Video</a>
@@ -66,20 +115,20 @@
             <h2>Galleria</h2>
             <div class="gallery-container">
                 <div class="gallery-wrapper">
-                    <img class="gallery-image" src="images/IMG_8708.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8710.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8713.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8729.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8734.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8749.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8756.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8759.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8765.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8776.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8788.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8798.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8802.JPG" alt="Whimistical Bees">
-                    <img class="gallery-image" src="images/IMG_8804.JPG" alt="Whimistical Bees">
+                    <img class="gallery-image" src="images/IMG_8708.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8710.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8713.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8729.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8734.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8749.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8756.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8759.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8765.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8776.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8788.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8798.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8802.JPG" alt="">
+                    <img class="gallery-image" src="images/IMG_8804.JPG" alt="">
                 </div>
                 <div class="gallery-controls">
                     <button id="prev">&lt;</button>
@@ -122,4 +171,3 @@
     </script>
 </body>
 </html>
-
